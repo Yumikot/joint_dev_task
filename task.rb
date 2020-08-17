@@ -123,13 +123,16 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  user_data.store(update_data)
+  p user_data
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
+  array = data.to_a
+  p array
 
 end
 
@@ -138,8 +141,12 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
-end
+    if data1.include?(:age)
+      p 'OK'
+    else
+      p 'NG'
+    end
+  end
 
 def q16
   users = [
@@ -150,7 +157,15 @@ def q16
   ]
 
   # 以下に回答を記載
-
+    data = users[0]
+    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
+    data = users[1]
+    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
+    data = users[2]
+    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
+    data = users[3]
+    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
+ 
 end
 
 class UserQ17
