@@ -141,11 +141,19 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-    if data1.include?(:age)
-      p 'OK'
+    if data1.has_key?(:age)
+      puts "OK"
     else
-      p 'NG'
+      puts "NG"
     end
+     
+    if data2.has_key?(:age)
+      puts "OK"
+    else
+      puts "NG"
+    end
+    #三項演算子で
+     p data1.has_key?(:age)? "OKです" : "NGです"
   end
 
 def q16
