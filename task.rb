@@ -165,14 +165,9 @@ def q16
   ]
 
   # 以下に回答を記載
-    data = users[0]
-    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
-    data = users[1]
-    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
-    data = users[2]
-    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
-    data = users[3]
-    puts "名前は#{data[:name]}です、年齢は#{data[:age]}歳です"
+    users.each do |user|
+      puts"私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+    end
  
 end
 
