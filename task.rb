@@ -181,9 +181,12 @@ class UserQ17
   end
 
   def info
-   puts  "名前:#{@name}"
-   puts  "年齢:#{@age}"
-   puts  "性別:#{@gender}"
+
+   puts <<~EOS
+    "名前:#{@name}"
+    "年齢:#{@age}"
+    "性別:#{@gender}"
+    EOS
   end
 
 end
@@ -200,6 +203,15 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
+  def introduce  
+    
+    @age==32? "こんにちは、#{@name}と申します。よろしくお願いいたします。": "はいさいまいど〜、#{@name}です!!!"
+   
+  end
 
 end
 
