@@ -240,14 +240,21 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_accessor :name,:age,:entry_fee
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @entry_fee = params[:entry_fee]
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
-
+  
+    puts "#{@name}さんの入場料金は#{@entry_fee}です。"
+  
 end
-
 
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
